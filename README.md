@@ -1,3 +1,11 @@
+# Portfolio Project
+
+This portfolio project is based on a template provided by [Midudev](https://midu.dev/), with modifications and my personal touch added to it. The aim is to showcase my work and skills in a unique 
+manner tailored to my preferences and style.
+
+
+
+
 # Astro Starter Kit: Basics
 
 ```sh
