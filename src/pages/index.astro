@@ -1,0 +1,69 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import AboutMe from "@/components/AboutMe.astro"
+import Briefcase from "@/components/icons/Briefcase.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import Experience from "@/components/Experience.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Projects from "@/components/Projects.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Hero from "@/components/Hero.astro"
+---
+
+<Layout
+  title="Porfolio de Matias Querejeta - Desarrollador y Programador Web con 15 años de experiencia"
+  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+      <SectionContainer id="experience">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+          <Briefcase class="size-8" />
+          Work Experience
+        </h2>
+        <Experience />
+      </SectionContainer>
+   
+     
+      <SectionContainer id="about-me">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white">
+          <ProfileCheck class="size-8" />
+          About Me
+        </h2>
+        <AboutMe />
+      </SectionContainer>
+      <SectionContainer id="projects">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+          <CodeIcon class="size-7" />
+          Languages, Frameworks and Tools
+        </h2>
+        
+        <p style="display: flex; align-items: center; gap: 10px;"><img  title="C#" height="35" width="35" src="images/csharp.svg">
+          <img title="react" height="35" width="35"src="images/react.svg">
+          <img title="js" height="35"width="35" src="images/javascript-original.svg">
+          <img title="css" height="35"width="35" src="images/css3-original.svg">
+          <img title="dotnet" height="35"width="35" src="images/dotnetcore-original.svg">
+          <img title="tailwind" height="35"width="35" src="images/tailwindcss-plain.svg">
+          <img title="git" height="35"width="35" src="images/git-original.svg">
+          <img title="html" height="35"width="35" src="images/html5-original.svg">
+          <img title="bootstrap" height="35"width="35" src="images/bootstrap-original.svg">
+          <img title="visual" height="35"width="35" src="images/visualstudio-plain.svg">
+          <img title="vscode" height="35"width="35" src="images/vscode-original.svg">
+          <img title="blazor" height="35"width="35" src="images/blazor.svg">
+          <img title="tensor" height="35"width="35" src="images/tensorflow-original.svg"> </p>
+      
+      </SectionContainer>
+      <SectionContainer id="projects">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+          <CodeIcon class="size-7" />
+          Projects (Coming soon)
+        </h2>
+        <Projects />
+      </SectionContainer>
+      
