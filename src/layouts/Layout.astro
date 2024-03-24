@@ -110,6 +110,23 @@ const { description, title } = Astro.props
           }
         }
       }
+      @keyframes show {
+        from {
+          opacity: 0;
+          sacale: 25%;
+        }
+        to {
+          opacity: 1;
+          scale: 100%;
+        }
+      }
+      section {
+        view-timeline-name: --section;
+        view-timeline-axis: block;
+        animation-timeline: --section;
+        animation-name: show;
+
+      }
     </style>
   </body>
 </html>
