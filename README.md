@@ -1,10 +1,13 @@
 # Portfolio Project
 
-This portfolio project is based on a template provided by [Midudev](https://midu.dev/), with modifications and my personal touch added to it. The aim is to showcase my work and skills in a unique 
-manner tailored to my preferences and style.
+This portfolio project is built upon a template originally crafted by Midudev, with personalized modifications to reflect my unique style and preferences. Its primary goal is to present my professional work and skills in a distinctive manner, tailored to highlight my capabilities effectively.
 
+Key features of the project include:
 
-
+    -Utilization of Tailwind CSS Animated for seamless transition effects, enhancing the overall user experience.
+    -Astro
+    
+Through this portfolio, I aim to provide visitors with an insightful glimpse into my capabilities and past projects, showcasing my expertise and creativity.
 
 # Astro Starter Kit: Basics
 
