@@ -50,10 +50,10 @@ const navItems = [
     const sections = document.querySelectorAll("section");
     const navItems = document.querySelectorAll("header nav a");
 
-    const callback = (entries) => {
-      entries.forEach((entry) => {
+    const callback: IntersectionObserverCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry: IntersectionObserverEntry) => {
         if (entry.isIntersecting) {
-          navItems.forEach((item) => {
+          navItems.forEach((item: HTMLAnchorElement) => {
             if (item.getAttribute("aria-label") === entry.target.id) {
               item.classList.add("text-yellow-500");
             } else {
