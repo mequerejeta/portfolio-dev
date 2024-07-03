@@ -1,12 +1,7 @@
-import ThemeToggle from "./ThemeToggle.astro";
+---
+import ThemeToggle from "./ThemeToggle.astro"
 
-interface NavItem {
-  title: string;
-  label: string;
-  url: string;
-}
-
-const navItems: NavItem[] = [
+const navItems = [
   {
     title: "Contact",
     label: "contact",
@@ -32,7 +27,8 @@ const navItems: NavItem[] = [
     label: "projects",
     url: "/#projects",
   },
-];
+]
+---
 
 <header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
   <nav class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center">
@@ -54,10 +50,10 @@ const navItems: NavItem[] = [
     const sections = document.querySelectorAll("section");
     const navItems = document.querySelectorAll("header nav a");
 
-    const callback: IntersectionObserverCallback = (entries) => {
-      entries.forEach((entry: IntersectionObserverEntry) => {
+    const callback = (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          navItems.forEach((item: HTMLAnchorElement) => {
+          navItems.forEach((item) => {
             if (item.getAttribute("aria-label") === entry.target.id) {
               item.classList.add("text-yellow-500");
             } else {
