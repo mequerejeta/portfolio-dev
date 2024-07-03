@@ -47,10 +47,13 @@ import Badge from "@/components/Badge.astro"
         <article class="flex flex-col items-center justify-center gap-12 text-gray-700 dark:text-gray-300 md:flex-row">
           <div class="[&gt;p]:mb-4 [&gt;p&gt;strong]:text-yellow-500 dark:[&gt;p&gt;strong]:text-yellow-100 [&gt;p&gt;strong]:font-normal [&gt;p&gt;strong]:font-mono text-pretty order-2 md:order-1">
             <p style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px;">
-                  <img title="C#" height="10%" width="10%" src="images/csharp.svg" >
                   <img title="react" height="10%" width="10%" src="images/react.svg" >
                   <img title="js" height="10%" width="10%" src="images/javascript-original.svg" >
+                  <img title="C#" height="10%" width="10%" src="images/csharp.svg" >
                   <img title="css" height="10%" width="10%" src="images/css3-original.svg" >
+                  <img title="redux" height="10%" width="10%" src="images/redux-svgrepo-com.svg" >
+                  <img title="nextjs" height="10%" width="10%" src="images/next-js-svgrepo-com.svg" >
+                  <img title="typescript" height="10%" width="10%" src="images/typescript-svgrepo-com.svg" >
                   <img title="dotnet" height="10%" width="10%" src="images/dotnetcore-original.svg" >
                   <img title="tailwind" height="10%" width="10%" src="images/tailwindcss-plain.svg" >
                   <img title="git" height="10%" width="10%" src="images/git-original.svg" >
@@ -73,4 +76,11 @@ import Badge from "@/components/Badge.astro"
         <Projects />
       </SectionContainer>
      
- 
+ <style>
+  img{
+transition: width 1s, height 1s, transform 1s;
+  }
+  img:hover{
+    transform: rotate(360deg);
+  }
+ </style>

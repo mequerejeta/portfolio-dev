@@ -2,97 +2,88 @@
 import ThemeToggle from "./ThemeToggle.astro"
 
 const navItems = [
-{
-  title: "Contact",
-  label: "contact",
-  url: "mailto:matiasezequielquerejeta@gmail.com",
-},
-{
-  title: "Home",
-  label: "home",
-  url: "/#home",
-},
-{
-  title: "Experience",
-  label: "experience",
-  url: "/#experience",
-},
-{
-  title: "Me",
-  label: "about-me",
-  url: "/#about-me",
-},
-{
-  title: "Skills",
-  label: "projects",
-  url: "/#projects",
-},
-
-
+  {
+    title: "Contact",
+    label: "contact",
+    url: "mailto:mquerejeta.dev@gmail.com",
+  },
+  {
+    title: "Home",
+    label: "home",
+    url: "/#home",
+  },
+  {
+    title: "Experience",
+    label: "experience",
+    url: "/#experience",
+  },
+  {
+    title: "Me",
+    label: "about-me",
+    url: "/#about-me",
+  },
+  {
+    title: "Skills",
+    label: "projects",
+    url: "/#projects",
+  },
 ]
 ---
 
-<header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
->
-  <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
-  >
-    {
-      navItems.map((link) => (
-        <a
-          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
-          aria-label={link.label}
-          href={link.url}
-        >
-          {link.title}
-        </a>
-      ))
-    }
+<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
+  <nav class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center">
+    {navItems.map((link) => (
+      <a
+        class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+        aria-label={link.label}
+        href={link.url}
+      >
+        {link.title}
+      </a>
+    ))}
     <ThemeToggle />
   </nav>
 </header>
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
 
-    const callback = (entries: any[]) => {
+    const callback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500")
+            if (item.getAttribute("aria-label") === entry.target.id) {
+              item.classList.add("text-yellow-500");
             } else {
-              item.classList.remove("text-yellow-500")
+              item.classList.remove("text-yellow-500");
             }
-          })
+          });
         }
-      })
-    }
+      });
+    };
 
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.3,
-    })
+      threshold: 0.5, // Ajustado a 0.5 para mejorar la detección
+    });
 
     sections.forEach((section) => {
-      observer.observe(section)
-    })
+      observer.observe(section);
+    });
 
-    // Cleanup function
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
-        observer.disconnect()
+        observer.disconnect();
       } else {
         sections.forEach((section) => {
-          observer.observe(section)
-        })
+          observer.observe(section);
+        });
       }
-    }
-  })
+    };
+  });
 </script>
 
 <style>
